@@ -3,157 +3,534 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WCore Solutions & Innovation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <title>WCore Solutions & Innovation - Líderes en Transformación Digital e Innovación Tecnológica</title>
+  
+  <!-- Metadatos y SEO -->
+  <meta name="description" content="WCore Solutions & Innovation: Potenciamos tu éxito con desarrollo web y móvil de vanguardia, automatización inteligente con IA, análisis de datos experto, chatbots revolucionarios y asesoría técnica especializada. Somos tu socio estratégico para la innovación.">
+  <meta name="keywords" content="desarrollo web profesional, desarrollo móvil avanzado, inteligencia artificial aplicada, automatización de procesos, análisis de datos estratégico, chatbots con NLP, consultoría tecnológica, innovación digital, soluciones empresariales, Colombia tecnología">
+  <meta name="author" content="WCore Solutions & Innovation">
+  <link rel="canonical" href="URL_DE_TU_SITIO_WEB">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Tipografías -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap">
+
+  <!-- Iconos (Font Awesome) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- AOS (Animaciones on Scroll) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Swiper (para carrusel de testimonios) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.6/swiper-bundle.min.css" />
+
   <style>
-    * {
+    /*********************************************
+     Variables CSS (colores, tipografías, etc.)
+    **********************************************/
+    :root {
+      --primary-color: #1a237e; /* Un azul más profundo y profesional */
+      --secondary-color: #00bcd4; /* Un acento moderno y vibrante */
+      --secondary-color-hover: #0097aa; /* Versión más oscura del acento */
+      --text-color-primary: #333;
+      --text-color-secondary: #777;
+      --background-light: #f9f9f9;
+      --background-dark: #e0e0e0;
+      --box-shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --box-shadow-dark: 0 6px 18px rgba(0, 0, 0, 0.12);
+      --border-radius-main: 8px;
+      --transition-duration: 0.4s;
+      --font-family-title: 'Montserrat', sans-serif;
+      --font-family-body: 'Open Sans', sans-serif;
+    }
+
+    /*********************************************
+     Reset y estilos globales
+    **********************************************/
+    *, *::before, *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Poppins', sans-serif;
-      color: #2c3e50;
-      position: relative;
-      background-color: #f9fbfd;
+      font-family: var(--font-family-body);
+      color: var(--text-color-primary);
+      background-color: var(--background-light);
+      line-height: 1.7;
     }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /*********************************************
+     Header con video de fondo (y degradado fallback)
+    **********************************************/
     header {
-      background: linear-gradient(120deg, #0d3b66, #2e86ab);
-      color: white;
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+      color: var(--background-light);
       text-align: center;
-      padding: 80px 20px 40px;
+      /* Degradado sutil de fallback */
+      background: linear-gradient(135deg, rgba(13, 59, 102, 0.95), rgba(26, 35, 126, 0.95));
+      padding: 120px 30px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
-    header img {
-      width: 100px;
-      border-radius: 12px;
-      margin-bottom: 15px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+
+    /* Video de fondo ocupando el header */
+    header video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1; /* detrás del contenido */
+      opacity: 0.55; /* algo de transparencia para que el texto se lea */
     }
+
     header h1 {
-      font-size: 2.8rem;
+      font-family: var(--font-family-title);
+      font-size: 3.6rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #fff; /* Aseguramos color blanco para visibilidad */
     }
+
     header p {
-      font-size: 1.1rem;
-      margin-top: 10px;
-      color: #cceaf7;
-      font-weight: 500;
+      font-size: 1.3rem;
+      margin-top: 20px;
+      font-weight: 400;
+      color: #f0f0f0; /* más claro que var(--background-dark) */
+      max-width: 700px;
     }
+
+    /*********************************************
+     Sección de Servicios
+    **********************************************/
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 40px;
-      padding: 60px 20px;
-      max-width: 1200px;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 60px;
+      padding: 90px 30px;
+      max-width: 1400px;
       margin: auto;
     }
+
     .service-box {
-      background: #fff;
-      padding: 30px;
-      border-radius: 15px;
+      background-color: var(--background-light);
+      padding: 50px;
+      border-radius: var(--border-radius-main);
       text-align: center;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.07);
-      transition: transform 0.3s ease;
+      box-shadow: var(--box-shadow-light);
+      transition: transform var(--transition-duration) ease-in-out, 
+                  box-shadow var(--transition-duration) ease-in-out;
+      cursor: pointer;
+      border: 1px solid transparent;
+      position: relative;
     }
+
     .service-box:hover {
-      transform: translateY(-6px);
+      transform: translateY(-10px);
+      box-shadow: var(--box-shadow-dark);
+      border-color: var(--secondary-color);
     }
+
     .service-box img {
-      width: 60px;
-      margin-bottom: 15px;
+      width: 80px;
+      margin-bottom: 25px;
+      filter: grayscale(0.8); /* Iconos ligeramente grises */
+      transition: filter var(--transition-duration);
     }
+
+    .service-box:hover img {
+      filter: grayscale(0); /* Iconos a color al hacer hover */
+    }
+
     .service-box h3 {
-      margin-bottom: 10px;
-      color: #0d3b66;
+      font-family: var(--font-family-title);
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+      font-weight: 600;
     }
+
     .service-box p {
-      color: #555;
+      font-size: 1.2rem;
+      color: var(--text-color-secondary);
+      line-height: 1.8;
     }
+
+    .service-details {
+      display: none;
+      margin-top: 20px;
+      color: var(--text-color-primary);
+      font-size: 1.1rem;
+      line-height: 1.9;
+    }
+
+    /*********************************************
+     Sección de Proyectos
+    **********************************************/
+    .projects {
+      text-align: center;
+      background-color: var(--background-dark); /* Fondo más oscuro para contraste */
+      padding: 80px 30px;
+    }
+
+    .projects h2 {
+      font-family: var(--font-family-title);
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+
+    .projects .project-box {
+      margin: 50px auto;
+      padding: 40px;
+      max-width: 1000px;
+      background-color: var(--background-light);
+      border-radius: var(--border-radius-main);
+      box-shadow: var(--box-shadow-light);
+      border-left: 5px solid var(--secondary-color); /* Barra lateral de acento */
+      text-align: left;
+    }
+
+    .projects .project-box h3 {
+      font-family: var(--font-family-title);
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    .projects .project-box p {
+      font-size: 1.2rem;
+      color: var(--text-color-primary);
+      line-height: 1.9;
+    }
+
+    /*********************************************
+     Sección de Testimonios (Swiper)
+    **********************************************/
+    .testimonials {
+      text-align: center;
+      padding: 80px 30px;
+      background-color: #f0f0f0;
+    }
+
+    .testimonials h2 {
+      font-family: var(--font-family-title);
+      font-size: 2.4rem;
+      margin-bottom: 2rem;
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+
+    .swiper {
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .swiper-slide {
+      background-color: #fff;
+      border-radius: var(--border-radius-main);
+      padding: 40px 30px;
+      box-shadow: var(--box-shadow-light);
+    }
+
+    .testimonial-content {
+      font-size: 1.2rem;
+      color: var(--text-color-secondary);
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    .testimonial-author {
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    /*********************************************
+     Sección CTA
+    **********************************************/
     .cta {
       text-align: center;
-      background: #0d3b66;
-      color: white;
-      padding: 50px 20px;
+      background-color: var(--background-dark); /* Fondo más oscuro para contraste */
+      padding: 80px 30px;
     }
+
     .cta h2 {
-      font-size: 2rem;
+      font-family: var(--font-family-title);
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      color: var(--primary-color);
+      font-weight: 700;
     }
+
+    .cta p {
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+      color: var(--text-color-secondary);
+    }
+
     .cta a {
       display: inline-block;
-      margin: 15px 10px 0;
-      padding: 15px 30px;
-      background-color: #2e86ab;
-      color: white;
-      border-radius: 8px;
+      margin: 15px;
+      padding: 20px 40px;
+      background-color: var(--secondary-color);
+      color: var(--background-light);
+      border-radius: var(--border-radius-main);
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: background-color var(--transition-duration), transform 0.2s ease-in-out;
+      box-shadow: var(--box-shadow-light);
     }
+
     .cta a:hover {
-      background-color: #1f648b;
+      background-color: var(--secondary-color-hover);
+      transform: scale(1.05);
+      box-shadow: var(--box-shadow-dark);
     }
+
+    /*********************************************
+     Footer
+    **********************************************/
     footer {
       text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      background-color: #0d3b66;
-      color: white;
+      padding: 40px 30px;
+      font-size: 1.1rem;
+      background-color: var(--primary-color);
+      color: var(--background-light);
+    }
+
+    footer a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      transition: color var(--transition-duration);
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      color: var(--secondary-color-hover);
+    }
+
+    /*********************************************
+     Media Queries (Responsividad)
+    **********************************************/
+    @media (max-width: 992px) {
+      .services {
+        grid-template-columns: 1fr;
+        padding: 70px 20px;
+      }
+      .service-box {
+        padding: 40px;
+      }
+      .projects h2,
+      .testimonials h2,
+      .cta h2 {
+        font-size: 2.4rem;
+      }
+      .projects .project-box {
+        padding: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 100px 20px 60px;
+        min-height: 70vh; /* Ajuste para pantallas pequeñas */
+      }
+      header h1 {
+        font-size: 3rem;
+      }
+      header p {
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
 <body>
+
+  <!-- HEADER con Video de Fondo -->
   <header>
-    <h1>WCore Solutions & Innovation</h1>
-    <p>Tu aliado para transformar ideas en herramientas funcionales.</p>
+    <!-- Ajusta la URL del video a uno propio o de banco libre en .mp4 / .webm -->
+    <video src="empresa.mp4" 
+           autoplay muted loop></video>
+
+    <h1 data-aos="fade-down">WCore Solutions & Innovation</h1>
+    <p data-aos="fade-up">Impulsando la transformación digital con soluciones tecnológicas innovadoras y a medida.</p>
   </header>
 
+  <!-- SECCIÓN DE SERVICIOS -->
   <section class="services">
-    <div class="service-box" data-aos="zoom-in">
-      <img src="https://cdn-icons-png.flaticon.com/512/841/841364.png" alt="Web">
-      <h3>Desarrollo Web y Móvil</h3>
-      <p>Apps modernas y responsivas adaptadas a tus necesidades de proyecto.</p>
+    <div class="service-box" onclick="toggleDetails(this)" data-aos="fade-up">
+      <img src="https://cdn-icons-png.flaticon.com/512/841/841364.png" alt="Desarrollo Web y Móvil">
+      <h3>Desarrollo Web y Móvil de Alto Rendimiento</h3>
+      <p>Creamos experiencias digitales excepcionales con aplicaciones web y móviles escalables y centradas en el usuario.</p>
+      <div class="service-details">
+        Desarrollamos plataformas robustas y personalizadas para optimizar procesos y mejorar la interacción con tus usuarios. Integramos tecnologías avanzadas para garantizar rendimiento y seguridad.
+      </div>
     </div>
-    <div class="service-box" data-aos="zoom-in" data-aos-delay="100">
-      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712104.png" alt="IA">
-      <h3>Automatización e IA</h3>
-      <p>Bots, modelos de IA y soluciones inteligentes personalizadas.</p>
+    <div class="service-box" onclick="toggleDetails(this)" data-aos="fade-up" data-aos-delay="100">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712104.png" alt="Automatización e IA">
+      <h3>Automatización Inteligente y Modelos de IA Avanzados</h3>
+      <p>Optimizamos operaciones y desbloqueamos insights con soluciones de automatización impulsadas por inteligencia artificial.</p>
+      <div class="service-details">
+        Implementamos RPA y desarrollamos modelos predictivos y clasificatorios para la toma de decisiones estratégicas y la mejora continua de procesos.
+      </div>
     </div>
-    <div class="service-box" data-aos="zoom-in" data-aos-delay="200">
-      <img src="https://cdn-icons-png.flaticon.com/512/3011/3011270.png" alt="Scraping">
-      <h3>Scraping y Datos</h3>
-      <p>Extracción y análisis de datos para decisiones informadas.</p>
+    <div class="service-box" onclick="toggleDetails(this)" data-aos="fade-up" data-aos-delay="200">
+      <img src="https://cdn-icons-png.flaticon.com/512/3011/3011270.png" alt="Scraping y Datos">
+      <h3>Extracción y Análisis de Datos Estratégicos</h3>
+      <p>Transformamos datos brutos en información valiosa para la toma de decisiones informadas y el crecimiento empresarial.</p>
+      <div class="service-details">
+        Realizamos scraping avanzado y análisis exhaustivo de datos para identificar tendencias, patrones y oportunidades clave para tu negocio.
+      </div>
     </div>
-    <div class="service-box" data-aos="zoom-in" data-aos-delay="300">
-      <img src="https://cdn-icons-png.flaticon.com/512/4152/4152325.png" alt="Chatbot">
-      <h3>Chatbots Inteligentes</h3>
-      <p>Asistentes conversacionales que automatizan atención y soporte.</p>
+    <div class="service-box" onclick="toggleDetails(this)" data-aos="fade-up" data-aos-delay="300">
+      <img src="https://cdn-icons-png.flaticon.com/512/4152/4152325.png" alt="Chatbots Inteligentes">
+      <h3>Chatbots Inteligentes con Experiencia Conversacional Superior</h3>
+      <p>Mejoramos la interacción con tus clientes y optimizamos la atención al cliente con chatbots inteligentes y personalizados.</p>
+      <div class="service-details">
+        Desarrollamos chatbots con procesamiento de lenguaje natural para brindar soporte eficiente, responder preguntas frecuentes y mejorar la experiencia del usuario en diversos canales.
+      </div>
     </div>
-    <div class="service-box" data-aos="zoom-in" data-aos-delay="400">
-      <img src="https://cdn-icons-png.flaticon.com/512/2026/2026501.png" alt="Dashboards">
-      <h3>Dashboards y Modelos</h3>
-      <p>Power BI, Looker Studio y modelos predictivos para tus reportes.</p>
+    <div class="service-box" onclick="toggleDetails(this)" data-aos="fade-up" data-aos-delay="400">
+      <img src="https://cdn-icons-png.flaticon.com/512/2026/2026501.png" alt="Dashboards y Modelos">
+      <h3>Dashboards Interactivos y Modelos Predictivos Personalizados</h3>
+      <p>Visualizamos datos complejos y predecimos tendencias futuras con dashboards intuitivos y modelos analíticos a medida.</p>
+      <div class="service-details">
+        Creamos paneles de control dinámicos y desarrollamos modelos predictivos para facilitar la comprensión de datos y la anticipación de escenarios futuros.
+      </div>
     </div>
-    <div class="service-box" data-aos="zoom-in" data-aos-delay="500">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Asesoría">
-      <h3>Asesoría Técnica</h3>
-      <p>Acompañamiento estratégico para proyectos UNAL y similares.</p>
+    <div class="service-box" onclick="toggleDetails(this)" data-aos="fade-up" data-aos-delay="500">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Asesoría Técnica">
+      <h3>Asesoría Técnica Estratégica y Acompañamiento Especializado</h3>
+      <p>Brindamos orientación experta y apoyo técnico para impulsar tus proyectos tecnológicos hacia el éxito.</p>
+      <div class="service-details">
+        Ofrecemos consultoría especializada y acompañamiento integral en la planificación, desarrollo e implementación de soluciones tecnológicas innovadoras.
+      </div>
     </div>
   </section>
 
+  <!-- SECCIÓN DE PROYECTOS -->
+  <section class="projects">
+    <h2 data-aos="zoom-in">Proyectos Innovadores que Transforman el Futuro</h2>
+    <div class="project-box" data-aos="fade-up">
+      <h3>Plataforma Inteligente de Análisis de Sentimiento en Redes Sociales</h3>
+      <p>Desarrollamos una plataforma avanzada que extrae y analiza en tiempo real el sentimiento de los usuarios en Twitter, proporcionando insights valiosos sobre la percepción de marcas y temas específicos.</p>
+    </div>
+    <div class="project-box" data-aos="fade-up" data-aos-delay="100">
+      <h3>Sistema de Gestión de Proyectos de Extensión con Visualización Interactiva</h3>
+      <p>Implementamos un sistema integral de gestión de proyectos de extensión con un dashboard interactivo que permite el seguimiento detallado de avances, recursos, indicadores y presupuestos.</p>
+    </div>
+    <div class="project-box" data-aos="fade-up" data-aos-delay="200">
+      <h3>Solución de Automatización Robusta para la Gestión de Pagos y Reportes Financieros</h3>
+      <p>Creamos una solución de automatización integral que simplifica y agiliza el proceso de revisión, firma y carga de reportes de pagos mensuales, optimizando la eficiencia operativa y reduciendo errores.</p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE TESTIMONIOS con Swiper -->
+  <section class="testimonials" id="testimonios">
+    <h2 data-aos="fade-right">Testimonios</h2>
+    <div class="swiper" data-aos="fade-up" data-aos-delay="100">
+      <!-- WRAPPER Swiper -->
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="testimonial-content">
+            “WCore ha llevado nuestras operaciones a otro nivel. Sus soluciones de IA optimizaron nuestras respuestas de atención al cliente en un 70%.”
+          </div>
+          <div class="testimonial-author">- Juan Pérez, CEO de TechCorp</div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial-content">
+            “La calidad de sus desarrollos web y móviles es impresionante. Nuestro portal e-commerce fue lanzado con un diseño impecable y rendimiento extraordinario.”
+          </div>
+          <div class="testimonial-author">- Laura Gómez, Directora de Innovación</div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial-content">
+            “Gracias a su asesoría técnica estratégica, nos hemos posicionado como referentes en transformación digital. ¡Increíble trabajo!”
+          </div>
+          <div class="testimonial-author">- Carlos Ruiz, Gerente de Proyectos</div>
+        </div>
+      </div>
+      <!-- Pagination y Navigation -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN CTA -->
   <section class="cta">
-    <h2>¿Tienes un proyecto en mente?</h2>
-    <p>Contáctanos para ayudarte a materializar tus ideas.</p>
-    <a href="https://form.jotform.com/250846348123053" target="_blank">📝 Formulario de Contacto</a>
-    <a href="https://wa.me/573136956632" target="_blank">💬 WhatsApp Directo</a>
+    <h2 data-aos="fade-down">¿Listo para Desatar el Potencial de tu Proyecto?</h2>
+    <p data-aos="fade-up">Contáctanos y juntos transformaremos tus ideas en soluciones digitales que marcarán la diferencia.</p>
+    <a href="https://form.jotform.com/250846348123053" target="_blank" rel="noopener">🚀 ¡Comencemos a Innovar!</a>
+    <a href="https://wa.me/573136956632" target="_blank" rel="noopener">💬 Conversemos por WhatsApp</a>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    © <script>document.write(new Date().getFullYear());</script> WCore Solutions & Innovation. Todos los derechos reservados.
+    © <script>document.write(new Date().getFullYear());</script> WCore Solutions & Innovation. 
+    Todos los derechos reservados. |
+    <a href="#">Política de Privacidad</a> |
+    <a href="#">Términos de Servicio</a>
   </footer>
 
+  <!-- SCRIPTS -->
+  <!-- Librería AOS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.6/swiper-bundle.min.js"></script>
+
   <script>
-    AOS.init({ duration: 800, once: true });
+    // Inicializar AOS
+    AOS.init({
+      duration: 1000, // Duración de las animaciones
+      once: true      // Ejecutar animación solo la primera vez
+    });
+
+    // Carrusel de Testimonios (Swiper)
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      speed: 700,
+    });
+
+    // Función para toggle de detalles en sección Servicios
+    function toggleDetails(el) {
+      const details = el.querySelector('.service-details');
+      details.style.display = (details.style.display === 'block') ? 'none' : 'block';
+    }
   </script>
 </body>
 </html>
