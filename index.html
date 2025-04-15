@@ -1,536 +1,1534 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WCore Solutions & Innovation - Líderes en Transformación Digital e Innovación Tecnológica</title>
-  
-  <!-- Metadatos y SEO -->
-  <meta name="description" content="WCore Solutions & Innovation: Potenciamos tu éxito con desarrollo web y móvil de vanguardia, automatización inteligente con IA, análisis de datos experto, chatbots revolucionarios y asesoría técnica especializada. Somos tu socio estratégico para la innovación.">
-  <meta name="keywords" content="desarrollo web profesional, desarrollo móvil avanzado, inteligencia artificial aplicada, automatización de procesos, análisis de datos estratégico, chatbots con NLP, consultoría tecnológica, innovación digital, soluciones empresariales, Colombia tecnología">
-  <meta name="author" content="WCore Solutions & Innovation">
-  <link rel="canonical" href="URL_DE_TU_SITIO_WEB">
+  <title>WCore Solutions &amp; Innovation - Transformación Digital e Innovación</title>
 
-  <!-- Favicon -->
+  <!-- Metaetiquetas SEO mejoradas -->
+  <meta name="description" content="WCore Solutions &amp; Innovation: Expertos en transformación digital. Desarrollo web, móvil, IA, automatización y análisis de datos para impulsar tu negocio." />
+  <meta name="keywords" content="desarrollo web, desarrollo móvil, inteligencia artificial, automatización, análisis de datos, chatbots, innovación digital, transformación digital, Bogotá, Colombia" />
+  <meta name="author" content="Willinton Caicedo Tez - WCore Solutions &amp; Innovation" />
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0066cc">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="WCore Solutions &amp; Innovation - Líderes en Transformación Digital" />
+  <meta property="og:description" content="Expertos en desarrollo tecnológico que transforma negocios. Soluciones web, móviles, IA y análisis de datos para crecimiento empresarial." />
+  <meta property="og:url" content="https://wcore-solutions.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://wcore-solutions.com/assets/preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="es_ES" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WCore Solutions &amp; Innovation - Innovación Tecnológica" />
+  <meta name="twitter:description" content="Soluciones digitales personalizadas para potenciar tu negocio. Desarrollo web, móvil, IA y automatización de procesos." />
+  <meta name="twitter:image" content="https://wcore-solutions.com/assets/preview.png" />
+
+  <!-- Preconexiones y precargas mejoradas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+  <!-- Precarga de recursos críticos optimizada -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" crossorigin="anonymous">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" as="style" crossorigin="anonymous">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.6/swiper-bundle.min.css" as="style" crossorigin="anonymous">
+
+  <!-- Favicon e iconos con preload -->
+  <link rel="preload" href="favicon.ico" as="image" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#0066cc">
 
-  <!-- Tipografías -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap">
-
-  <!-- Iconos (Font Awesome) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <!-- AOS (Animaciones on Scroll) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-
-  <!-- Swiper (para carrusel de testimonios) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.6/swiper-bundle.min.css" />
+  <!-- CSS externos con preload -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.6/swiper-bundle.min.css" crossorigin="anonymous" />
 
   <style>
-    /*********************************************
-     Variables CSS (colores, tipografías, etc.)
-    **********************************************/
-    :root {
-      --primary-color: #1a237e; /* Un azul más profundo y profesional */
-      --secondary-color: #00bcd4; /* Un acento moderno y vibrante */
-      --secondary-color-hover: #0097aa; /* Versión más oscura del acento */
-      --text-color-primary: #333;
-      --text-color-secondary: #777;
-      --background-light: #f9f9f9;
-      --background-dark: #e0e0e0;
-      --box-shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
-      --box-shadow-dark: 0 6px 18px rgba(0, 0, 0, 0.12);
-      --border-radius-main: 8px;
-      --transition-duration: 0.4s;
-      --font-family-title: 'Montserrat', sans-serif;
-      --font-family-body: 'Open Sans', sans-serif;
+    /* Contenedor global para centrar el contenido */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
-
-    /*********************************************
-     Reset y estilos globales
-    **********************************************/
+    
+    /* Fondo en degradado sutil optimizado */
+    body {
+      background: linear-gradient(to bottom, #ffffff, #f8fafc);
+      transition: background-color 0.3s ease, color 0.3s ease;
+      min-height: 100vh;
+    }
+    
+    /* Variables CSS con nueva paleta de colores profesional */
+    :root {
+      /* Colores para modo claro - Paleta profesional azul/verde */
+      --primary: #0066cc;           /* Azul corporativo principal */
+      --primary-hover: #0052a3;     /* Azul más oscuro para hover */
+      --primary-light: #4d88ff;     /* Azul claro para acentos */
+      --secondary: #2ecc71;         /* Verde para elementos secundarios */
+      --secondary-hover: #27ae60;   /* Verde más oscuro para hover */
+      --accent: #ff6b35;            /* Naranja para llamadas a la acción */
+      --accent-hover: #e05a2b;      /* Naranja más oscuro para hover */
+      --accent-light: #ff8c66;      /* Naranja claro para detalles */
+      
+      --text-primary: #1a1a1a;      /* Texto principal casi negro */
+      --text-secondary: #4a5568;    /* Texto secundario gris */
+      --text-light: #f8f9fa;        /* Texto claro para fondos oscuros */
+      
+      --bg-primary: #ffffff;        /* Fondo principal blanco */
+      --bg-secondary: #f8fafc;      /* Fondo secundario gris muy claro */
+      --bg-dark: #2d3748;           /* Fondo oscuro para elementos especiales */
+      --bg-darker: #1a202c;         /* Fondo más oscuro para modo oscuro */
+      
+      --border-color: #e2e8f0;      /* Color de bordes */
+      --border-radius: 8px;         /* Radio de bordes */
+      
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+      --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+      
+      --transition: all 0.3s ease;
+      --transition-fast: all 0.15s ease;
+      
+      --font-title: 'Montserrat', sans-serif;
+      --font-body: 'Open Sans', sans-serif;
+      
+      --max-width: 1200px;
+      --header-height: 80px;
+    }
+    
+    /* Modo oscuro con colores mejor contrastados */
+    [data-theme="dark"] {
+      --primary: #4d88ff;           /* Azul más claro para mejor contraste */
+      --primary-hover: #3a75e6;     /* Azul hover */
+      --primary-light: #66a3ff;     /* Azul claro */
+      --secondary: #48d68b;         /* Verde más claro */
+      --secondary-hover: #3bc480;   /* Verde hover */
+      --accent: #ff8c66;            /* Naranja más claro */
+      --accent-hover: #ff7a4d;      /* Naranja hover */
+      --accent-light: #ffa78a;      /* Naranja muy claro */
+      
+      --text-primary: #f8f9fa;      /* Texto principal blanco */
+      --text-secondary: #cbd5e0;    /* Texto secundario gris claro */
+      
+      --bg-primary: #1a202c;        /* Fondo principal oscuro */
+      --bg-secondary: #2d3748;      /* Fondo secundario gris oscuro */
+      --bg-dark: #1a202c;           /* Fondo oscuro */
+      --bg-darker: #0d1117;         /* Fondo más oscuro */
+      
+      --border-color: #4a5568;      /* Bordes gris oscuro */
+      
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+      --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Reset mejorado */
     *, *::before, *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
+    
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: var(--header-height);
     }
-
+    
     body {
-      font-family: var(--font-family-body);
-      color: var(--text-color-primary);
-      background-color: var(--background-light);
-      line-height: 1.7;
+      font-family: var(--font-body);
+      color: var(--text-primary);
+      line-height: 1.6;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-
+    
+    /* Tipografía responsive mejorada */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-title);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    
+    h1 { 
+      font-size: clamp(2.5rem, 5vw, 3.6rem);
+      line-height: 1.1;
+    }
+    h2 { 
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      margin-bottom: 1.5rem;
+    }
+    h3 { 
+      font-size: clamp(1.5rem, 3vw, 1.8rem);
+      margin-bottom: 1.25rem;
+    }
+    p { 
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    
     a {
       text-decoration: none;
-      color: inherit;
+      color: var(--primary);
+      transition: var(--transition-fast);
     }
-
-    /*********************************************
-     Header con video de fondo (y degradado fallback)
-    **********************************************/
-    header {
-      position: relative;
-      min-height: 100vh;
-      overflow: hidden;
-      color: var(--background-light);
-      text-align: center;
-      /* Degradado sutil de fallback */
-      background: linear-gradient(135deg, rgba(13, 59, 102, 0.95), rgba(26, 35, 126, 0.95));
-      padding: 120px 30px 80px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    
+    a:hover, a:focus {
+      color: var(--primary-hover);
+      outline: none;
     }
-
-    /* Video de fondo ocupando el header */
-    header video {
-      position: absolute;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* Mejoras de accesibilidad para enlaces y botones */
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+    
+    /* Navbar mejorada */
+    .navbar {
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
+      z-index: 1000;
+      transition: var(--transition);
+      background-color: transparent;
+      padding: 1.25rem 0;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    [data-theme="dark"] .navbar {
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .navbar.scrolled {
+      background-color: rgba(0,102,204,0.95);
+      box-shadow: var(--shadow-md);
+      padding: 0.75rem 0;
+      border-bottom: none;
+    }
+    
+    [data-theme="dark"] .navbar.scrolled {
+      background-color: rgba(26,32,44,0.95);
+    }
+    
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: var(--header-height);
+    }
+    
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: white;
+      transition: var(--transition);
+    }
+    
+    .navbar-logo:hover {
+      opacity: 0.9;
+    }
+    
+    .navbar-logo img {
+      height: 2rem;
+      width: auto;
+    }
+    
+    .dark-mode-toggle {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      transition: var(--transition);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+    
+    .dark-mode-toggle:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+    
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    
+    .nav-item .nav-link {
+      color: white;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: var(--border-radius);
+      transition: var(--transition);
+      position: relative;
+      font-size: 1rem;
+    }
+    
+    .nav-item .nav-link:hover {
+      color: rgba(255,255,255,0.9);
+      background-color: rgba(255,255,255,0.1);
+    }
+    
+    .nav-item .nav-link::after {
+      content: '';
+      display: block;
+      height: 2px;
+      background-color: white;
+      width: 0;
+      transition: width 0.3s ease;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .nav-item .nav-link:hover::after,
+    .nav-item .nav-link.active::after {
+      width: 60%;
+    }
+    
+    /* Menú móvil mejorado */
+    .navbar-toggle {
+      display: none;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      padding: 0.5rem;
+      z-index: 1001;
+      color: white;
+      transition: var(--transition);
+    }
+    
+    .navbar-toggle:hover {
+      opacity: 0.8;
+    }
+    
+    .navbar-toggle .bar {
+      display: block;
+      width: 1.75rem;
+      height: 2px;
+      margin: 0.375rem auto;
+      background-color: white;
+      transition: var(--transition);
+    }
+    
+    .navbar-toggle[aria-expanded="true"] .bar:nth-child(1) {
+      transform: translateY(0.5rem) rotate(45deg);
+    }
+    
+    .navbar-toggle[aria-expanded="true"] .bar:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .navbar-toggle[aria-expanded="true"] .bar:nth-child(3) {
+      transform: translateY(-0.5rem) rotate(-45deg);
+    }
+    
+    @media (max-width: 768px) {
+      .navbar-container {
+        flex-wrap: wrap;
+      }
+      .navbar-toggle {
+        display: block;
+      }
+      .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        flex-direction: column;
+        background-color: var(--primary);
+        padding: 5rem 2rem;
+        gap: 1.5rem;
+        clip-path: circle(0px at 90% -10%);
+        transition: clip-path 0.5s ease-in-out;
+        pointer-events: none;
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+      }
+      [data-theme="dark"] .nav-menu {
+        background-color: var(--bg-dark);
+      }
+      .nav-menu[data-visible="true"] {
+        clip-path: circle(1500px at 90% -10%);
+        pointer-events: auto;
+      }
+      .nav-item {
+        width: 100%;
+        text-align: center;
+      }
+      .nav-item .nav-link {
+        padding: 1rem;
+        font-size: 1.25rem;
+        display: block;
+      }
+      .nav-item .nav-link::after {
+        display: none;
+      }
+    }
+    
+    /* Header con Video y Degradado mejorado */
+    header {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      background: linear-gradient(135deg, rgba(0,102,204,0.9), rgba(77,136,255,0.8));
+      margin-top: calc(-1 * var(--header-height));
+      padding-top: var(--header-height);
+    }
+    
+    header video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
       height: 100%;
       object-fit: cover;
-      z-index: -1; /* detrás del contenido */
-      opacity: 0.55; /* algo de transparencia para que el texto se lea */
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      opacity: 0;
+      transition: opacity 1s ease;
     }
-
-    header h1 {
-      font-family: var(--font-family-title);
-      font-size: 3.6rem;
-      margin-bottom: 20px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: #fff; /* Aseguramos color blanco para visibilidad */
+    
+    header video.loaded {
+      opacity: 0.5;
     }
-
-    header p {
-      font-size: 1.3rem;
-      margin-top: 20px;
-      font-weight: 400;
-      color: #f0f0f0; /* más claro que var(--background-dark) */
-      max-width: 700px;
+    
+    .header-content {
+      position: relative;
+      z-index: 2;
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 2rem;
     }
-
-    /*********************************************
-     Sección de Servicios
-    **********************************************/
+    
+    .header-content h1 {
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      margin-bottom: 1.5rem;
+    }
+    
+    .header-content p {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+    
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.875rem 1.75rem;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      transition: var(--transition);
+      gap: 0.5rem;
+      font-size: 1rem;
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+    
+    .btn-cta {
+      background-color: var(--accent);
+      color: white;
+      box-shadow: var(--shadow-md);
+    }
+    
+    .btn-cta:hover, .btn-cta:focus {
+      background-color: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .btn-outline {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+    
+    .btn-outline:hover, .btn-outline:focus {
+      background-color: rgba(255,255,255,0.1);
+      transform: translateY(-2px);
+    }
+    
+    /* Scroll Down mejorado */
+    .scroll-down {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      color: white;
+      animation: bounce 2s infinite;
+      cursor: pointer;
+      z-index: 2;
+      opacity: 0.8;
+      transition: var(--transition);
+      background: none;
+      border: none;
+    }
+    
+    .scroll-down:hover {
+      opacity: 1;
+      color: var(--accent-light);
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+      40% { transform: translateY(-10px) translateX(-50%); }
+      60% { transform: translateY(-5px) translateX(-50%); }
+    }
+    
+    /* Secciones mejoradas */
+    .section {
+      padding: 80px 20px;
+      scroll-margin-top: var(--header-height);
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+      font-family: var(--font-title);
+      color: var(--text-primary);
+    }
+    
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background-color: var(--accent);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+    
+    /* Sobre mí mejorado */
+    .about-section {
+      background-color: var(--bg-secondary);
+      color: var(--text-primary);
+    }
+    
+    .about-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    /* Servicios mejorados */
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 60px;
-      padding: 90px 30px;
-      max-width: 1400px;
-      margin: auto;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
     }
-
+    
     .service-box {
-      background-color: var(--background-light);
-      padding: 50px;
-      border-radius: var(--border-radius-main);
+      background-color: var(--bg-primary);
+      padding: 2rem;
+      border-radius: var(--border-radius);
       text-align: center;
-      box-shadow: var(--box-shadow-light);
-      transition: transform var(--transition-duration) ease-in-out, 
-                  box-shadow var(--transition-duration) ease-in-out;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
       cursor: pointer;
-      border: 1px solid transparent;
-      position: relative;
+      border: 1px solid var(--border-color);
     }
-
-    .service-box:hover {
+    
+    .service-box:hover, .service-box:focus-within {
       transform: translateY(-10px);
-      box-shadow: var(--box-shadow-dark);
-      border-color: var(--secondary-color);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+      outline: none;
     }
-
+    
     .service-box img {
       width: 80px;
-      margin-bottom: 25px;
-      filter: grayscale(0.8); /* Iconos ligeramente grises */
-      transition: filter var(--transition-duration);
+      height: 80px;
+      margin: 0 auto 1.5rem;
+      object-fit: contain;
     }
-
-    .service-box:hover img {
-      filter: grayscale(0); /* Iconos a color al hacer hover */
-    }
-
+    
     .service-box h3 {
-      font-family: var(--font-family-title);
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      color: var(--primary-color);
-      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 1rem;
     }
-
-    .service-box p {
-      font-size: 1.2rem;
-      color: var(--text-color-secondary);
-      line-height: 1.8;
-    }
-
+    
     .service-details {
       display: none;
-      margin-top: 20px;
-      color: var(--text-color-primary);
-      font-size: 1.1rem;
-      line-height: 1.9;
-    }
-
-    /*********************************************
-     Sección de Proyectos
-    **********************************************/
-    .projects {
-      text-align: center;
-      background-color: var(--background-dark); /* Fondo más oscuro para contraste */
-      padding: 80px 30px;
-    }
-
-    .projects h2 {
-      font-family: var(--font-family-title);
-      font-size: 2.8rem;
-      margin-bottom: 30px;
-      color: var(--primary-color);
-      font-weight: 700;
-    }
-
-    .projects .project-box {
-      margin: 50px auto;
-      padding: 40px;
-      max-width: 1000px;
-      background-color: var(--background-light);
-      border-radius: var(--border-radius-main);
-      box-shadow: var(--box-shadow-light);
-      border-left: 5px solid var(--secondary-color); /* Barra lateral de acento */
+      margin-top: 1.5rem;
       text-align: left;
+      padding-left: 1rem;
+      border-left: 3px solid var(--primary);
     }
-
-    .projects .project-box h3 {
-      font-family: var(--font-family-title);
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-      color: var(--primary-color);
-      font-weight: 600;
+    
+    .service-box.active .service-details {
+      display: block;
+      animation: fadeIn 0.3s ease;
     }
-
-    .projects .project-box p {
-      font-size: 1.2rem;
-      color: var(--text-color-primary);
-      line-height: 1.9;
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-
-    /*********************************************
-     Sección de Testimonios (Swiper)
-    **********************************************/
-    .testimonials {
+    
+    /* Proyectos mejorados */
+    .projects-section {
+      background-color: var(--bg-secondary);
+    }
+    
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .project-card {
+      background-color: var(--bg-primary);
+      border-radius: var(--border-radius);
+      padding: 2rem;
       text-align: center;
-      padding: 80px 30px;
-      background-color: #f0f0f0;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border: 1px solid var(--border-color);
     }
-
-    .testimonials h2 {
-      font-family: var(--font-family-title);
-      font-size: 2.4rem;
-      margin-bottom: 2rem;
-      color: var(--primary-color);
-      font-weight: 700;
+    
+    .project-card:hover, .project-card:focus-within {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+      outline: none;
     }
-
+    
+    .project-icon {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+    
+    .project-card h3 {
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    
+    .project-card ul {
+      text-align: left;
+      margin-top: 1.5rem;
+      list-style: none;
+    }
+    
+    .project-card li {
+      margin-bottom: 0.75rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    
+    .project-card li::before {
+      content: '✓';
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    
+    /* Testimonios mejorados */
+    .testimonials-section {
+      background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));
+    }
+    
     .swiper {
-      width: 90%;
+      width: 100%;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    
+    .swiper-slide {
+      background-color: var(--bg-primary);
+      border-radius: var(--border-radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border: 1px solid var(--border-color);
+    }
+    
+    .swiper-slide:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+    
+    .testimonial-content {
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      color: var(--text-primary);
+      line-height: 1.8;
+      position: relative;
+    }
+    
+    .testimonial-content::before,
+    .testimonial-content::after {
+      content: '"';
+      color: var(--accent);
+      font-size: 2rem;
+      opacity: 0.3;
+      position: absolute;
+    }
+    
+    .testimonial-content::before {
+      top: -1rem;
+      left: -1rem;
+    }
+    
+    .testimonial-content::after {
+      bottom: -2rem;
+      right: -1rem;
+    }
+    
+    .testimonial-author {
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 1.5rem;
+      display: block;
+      text-align: right;
+    }
+    
+    .swiper-pagination-bullet {
+      background-color: var(--text-secondary);
+      opacity: 0.5;
+      width: 10px;
+      height: 10px;
+      transition: var(--transition);
+    }
+    
+    .swiper-pagination-bullet-active {
+      background-color: var(--primary);
+      opacity: 1;
+      width: 12px;
+      height: 12px;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: var(--primary);
+      transition: var(--transition);
+    }
+    
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+      color: var(--primary-hover);
+    }
+    
+    /* CTA / Contacto mejorado */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    
+    .cta-content {
       max-width: 800px;
       margin: 0 auto;
     }
-
-    .swiper-slide {
-      background-color: #fff;
-      border-radius: var(--border-radius-main);
-      padding: 40px 30px;
-      box-shadow: var(--box-shadow-light);
+    
+    .cta-content h2 {
+      color: white;
+      margin-bottom: 1.5rem;
     }
-
-    .testimonial-content {
-      font-size: 1.2rem;
-      color: var(--text-color-secondary);
-      margin-bottom: 1rem;
-      line-height: 1.7;
+    
+    .cta-content p {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 2rem;
     }
-
-    .testimonial-author {
-      font-weight: 600;
-      color: var(--primary-color);
-    }
-
-    /*********************************************
-     Sección CTA
-    **********************************************/
-    .cta {
-      text-align: center;
-      background-color: var(--background-dark); /* Fondo más oscuro para contraste */
-      padding: 80px 30px;
-    }
-
-    .cta h2 {
-      font-family: var(--font-family-title);
-      font-size: 2.8rem;
-      margin-bottom: 30px;
-      color: var(--primary-color);
-      font-weight: 700;
-    }
-
-    .cta p {
-      font-size: 1.3rem;
-      margin-bottom: 40px;
-      color: var(--text-color-secondary);
-    }
-
-    .cta a {
-      display: inline-block;
+    
+    .button-group a {
       margin: 15px;
-      padding: 20px 40px;
-      background-color: var(--secondary-color);
-      color: var(--background-light);
-      border-radius: var(--border-radius-main);
-      text-decoration: none;
+      padding: 15px 30px;
+      background-color: var(--secondary);
+      color: var(--bg-primary);
+      border-radius: var(--border-radius);
       font-size: 1.2rem;
       font-weight: 600;
-      transition: background-color var(--transition-duration), transform 0.2s ease-in-out;
-      box-shadow: var(--box-shadow-light);
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+      border: none;
+      cursor: pointer;
     }
-
-    .cta a:hover {
-      background-color: var(--secondary-color-hover);
+    
+    .button-group a:hover {
+      background-color: var(--secondary-hover);
       transform: scale(1.05);
-      box-shadow: var(--box-shadow-dark);
+      box-shadow: var(--shadow-lg);
     }
-
-    /*********************************************
-     Footer
-    **********************************************/
+    
+    /* Footer mejorado */
     footer {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
       text-align: center;
-      padding: 40px 30px;
-      font-size: 1.1rem;
-      background-color: var(--primary-color);
-      color: var(--background-light);
+      padding: 3rem 1rem;
     }
-
-    footer a {
-      color: var(--secondary-color);
+    
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .social-links a {
+      color: var(--text-light);
+      font-size: 1.5rem;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      background-color: rgba(255,255,255,0.1);
+    }
+    
+    .social-links a:hover {
+      color: var(--accent);
+      transform: translateY(-3px);
+      background-color: rgba(255,255,255,0.2);
+    }
+    
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .footer-links a {
+      color: var(--text-light);
       text-decoration: none;
-      transition: color var(--transition-duration);
-      margin: 0 10px;
+      transition: var(--transition);
+      padding: 0.5rem;
     }
-
-    footer a:hover {
-      color: var(--secondary-color-hover);
+    
+    .footer-links a:hover {
+      color: var(--accent);
     }
-
-    /*********************************************
-     Media Queries (Responsividad)
-    **********************************************/
-    @media (max-width: 992px) {
-      .services {
-        grid-template-columns: 1fr;
-        padding: 70px 20px;
-      }
-      .service-box {
-        padding: 40px;
-      }
-      .projects h2,
-      .testimonials h2,
-      .cta h2 {
-        font-size: 2.4rem;
-      }
-      .projects .project-box {
-        padding: 30px;
-      }
+    
+    .copyright {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
     }
-
+    
+    /* Botón Back to Top mejorado */
+    .back-to-top {
+      position: fixed;
+      right: 2rem;
+      bottom: 2rem;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      background-color: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      box-shadow: var(--shadow-lg);
+      cursor: pointer;
+      z-index: 999;
+      border: none;
+    }
+    
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-3px);
+    }
+    
+    /* Mejoras de accesibilidad para lectores de pantalla */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+    
+    /* Responsive mejorado */
     @media (max-width: 768px) {
-      header {
-        padding: 100px 20px 60px;
-        min-height: 70vh; /* Ajuste para pantallas pequeñas */
+      .services, .projects-grid {
+        grid-template-columns: 1fr;
       }
-      header h1 {
-        font-size: 3rem;
+      .button-group {
+        flex-direction: column;
+        width: 100%;
       }
-      header p {
-        font-size: 1.1rem;
+      .btn {
+        width: 100%;
+      }
+      .swiper-slide {
+        padding: 1.5rem;
+      }
+      .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .section {
+        padding: 60px 20px;
+      }
+    }
+    
+    /* Optimización para impresión */
+    @media print {
+      .navbar, .back-to-top, .scroll-down {
+        display: none !important;
+      }
+      body {
+        background: white !important;
+        color: black !important;
+      }
+      .section {
+        padding: 20px 0 !important;
+        break-inside: avoid;
+      }
+      a::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        font-weight: normal;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER con Video de Fondo -->
-  <header>
-    <!-- Ajusta la URL del video a uno propio o de banco libre en .mp4 / .webm -->
-    <video src="empresa.mp4" 
-           autoplay muted loop></video>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-container container">
+      <a href="#home" class="navbar-logo">
+        <span>WCore Solutions</span>
+      </a>
+      <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Alternar modo oscuro">
+        <i class="fas fa-moon"></i>
+        <span class="sr-only">Alternar modo oscuro</span>
+      </button>
+      <button class="navbar-toggle" id="mobile-menu" aria-label="Menú" aria-expanded="false" aria-controls="nav-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="#home" class="nav-link active">Inicio</a></li>
+        <li class="nav-item"><a href="#services" class="nav-link">Servicios</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link">Proyectos</a></li>
+        <li class="nav-item"><a href="#testimonios" class="nav-link">Testimonios</a></li>
+        <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <h1 data-aos="fade-down">WCore Solutions & Innovation</h1>
-    <p data-aos="fade-up">Impulsando la transformación digital con soluciones tecnológicas innovadoras y a medida.</p>
+  <!-- Header -->
+  <header id="home">
+    <video autoplay muted loop playsinline id="header-video">
+      <source src="assets/video.mp4" type="video/mp4">
+      <source src="assets/hero-video.webm" type="video/webm">
+      Tu navegador no soporta el elemento de video.
+    </video>
+    <div class="header-content container" data-aos="fade-down">
+      <h1>WCore Solutions &amp; Innovation</h1>
+      <p>Transformamos ideas en soluciones tecnológicas innovadoras</p>
+      <div class="button-group">
+        <a href="#services" class="btn btn-cta">Nuestros Servicios</a>
+        <a href="#contacto" class="btn btn-outline">Contáctanos</a>
+      </div>
+    </div>
+    <button class="scroll-down" aria-label="Desplazarse hacia abajo">
+      <i class="fas fa-chevron-down"></i>
+    </button>
   </header>
 
-  <!-- SECCIÓN DE SERVICIOS -->
-  <section class="services">
-    <div class="service-box" onclick="toggleDetails(this)" data-aos="fade-up">
-      <img src="https://cdn-icons-png.flaticon.com/512/841/841364.png" alt="Desarrollo Web y Móvil">
-      <h3>Desarrollo Web y Móvil de Alto Rendimiento</h3>
-      <p>Creamos experiencias digitales excepcionales con aplicaciones web y móviles escalables y centradas en el usuario.</p>
-      <div class="service-details">
-        Desarrollamos plataformas robustas y personalizadas para optimizar procesos y mejorar la interacción con tus usuarios. Integramos tecnologías avanzadas para garantizar rendimiento y seguridad.
-      </div>
-    </div>
-    <div class="service-box" onclick="toggleDetails(this)" data-aos="fade-up" data-aos-delay="100">
-      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712104.png" alt="Automatización e IA">
-      <h3>Automatización Inteligente y Modelos de IA Avanzados</h3>
-      <p>Optimizamos operaciones y desbloqueamos insights con soluciones de automatización impulsadas por inteligencia artificial.</p>
-      <div class="service-details">
-        Implementamos RPA y desarrollamos modelos predictivos y clasificatorios para la toma de decisiones estratégicas y la mejora continua de procesos.
-      </div>
-    </div>
-    <div class="service-box" onclick="toggleDetails(this)" data-aos="fade-up" data-aos-delay="200">
-      <img src="https://cdn-icons-png.flaticon.com/512/3011/3011270.png" alt="Scraping y Datos">
-      <h3>Extracción y Análisis de Datos Estratégicos</h3>
-      <p>Transformamos datos brutos en información valiosa para la toma de decisiones informadas y el crecimiento empresarial.</p>
-      <div class="service-details">
-        Realizamos scraping avanzado y análisis exhaustivo de datos para identificar tendencias, patrones y oportunidades clave para tu negocio.
-      </div>
-    </div>
-    <div class="service-box" onclick="toggleDetails(this)" data-aos="fade-up" data-aos-delay="300">
-      <img src="https://cdn-icons-png.flaticon.com/512/4152/4152325.png" alt="Chatbots Inteligentes">
-      <h3>Chatbots Inteligentes con Experiencia Conversacional Superior</h3>
-      <p>Mejoramos la interacción con tus clientes y optimizamos la atención al cliente con chatbots inteligentes y personalizados.</p>
-      <div class="service-details">
-        Desarrollamos chatbots con procesamiento de lenguaje natural para brindar soporte eficiente, responder preguntas frecuentes y mejorar la experiencia del usuario en diversos canales.
-      </div>
-    </div>
-    <div class="service-box" onclick="toggleDetails(this)" data-aos="fade-up" data-aos-delay="400">
-      <img src="https://cdn-icons-png.flaticon.com/512/2026/2026501.png" alt="Dashboards y Modelos">
-      <h3>Dashboards Interactivos y Modelos Predictivos Personalizados</h3>
-      <p>Visualizamos datos complejos y predecimos tendencias futuras con dashboards intuitivos y modelos analíticos a medida.</p>
-      <div class="service-details">
-        Creamos paneles de control dinámicos y desarrollamos modelos predictivos para facilitar la comprensión de datos y la anticipación de escenarios futuros.
-      </div>
-    </div>
-    <div class="service-box" onclick="toggleDetails(this)" data-aos="fade-up" data-aos-delay="500">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Asesoría Técnica">
-      <h3>Asesoría Técnica Estratégica y Acompañamiento Especializado</h3>
-      <p>Brindamos orientación experta y apoyo técnico para impulsar tus proyectos tecnológicos hacia el éxito.</p>
-      <div class="service-details">
-        Ofrecemos consultoría especializada y acompañamiento integral en la planificación, desarrollo e implementación de soluciones tecnológicas innovadoras.
-      </div>
+  <!-- Sobre mí -->
+  <section id="sobre-mi" class="section about-section">
+    <div class="container about-container" data-aos="fade-up">
+      <h2 class="section-title">Sobre mí</h2>
+      <p>Soy <strong>Willinton Caicedo Tez</strong>, Físico con formación en Astronomía y pasión por la tecnología. Con experiencia en análisis de datos, automatización y desarrollo de dashboards interactivos, he liderado proyectos de transformación digital.</p>
+      <p>Mi objetivo es transformar ideas en herramientas funcionales que potencien la innovación de las organizaciones.</p>
     </div>
   </section>
 
-  <!-- SECCIÓN DE PROYECTOS -->
-  <section class="projects">
-    <h2 data-aos="zoom-in">Proyectos Innovadores que Transforman el Futuro</h2>
-    <div class="project-box" data-aos="fade-up">
-      <h3>Plataforma Inteligente de Análisis de Sentimiento en Redes Sociales</h3>
-      <p>Desarrollamos una plataforma avanzada que extrae y analiza en tiempo real el sentimiento de los usuarios en Twitter, proporcionando insights valiosos sobre la percepción de marcas y temas específicos.</p>
-    </div>
-    <div class="project-box" data-aos="fade-up" data-aos-delay="100">
-      <h3>Sistema de Gestión de Proyectos de Extensión con Visualización Interactiva</h3>
-      <p>Implementamos un sistema integral de gestión de proyectos de extensión con un dashboard interactivo que permite el seguimiento detallado de avances, recursos, indicadores y presupuestos.</p>
-    </div>
-    <div class="project-box" data-aos="fade-up" data-aos-delay="200">
-      <h3>Solución de Automatización Robusta para la Gestión de Pagos y Reportes Financieros</h3>
-      <p>Creamos una solución de automatización integral que simplifica y agiliza el proceso de revisión, firma y carga de reportes de pagos mensuales, optimizando la eficiencia operativa y reduciendo errores.</p>
-    </div>
-  </section>
-
-  <!-- SECCIÓN DE TESTIMONIOS con Swiper -->
-  <section class="testimonials" id="testimonios">
-    <h2 data-aos="fade-right">Testimonios</h2>
-    <div class="swiper" data-aos="fade-up" data-aos-delay="100">
-      <!-- WRAPPER Swiper -->
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="testimonial-content">
-            “WCore ha llevado nuestras operaciones a otro nivel. Sus soluciones de IA optimizaron nuestras respuestas de atención al cliente en un 70%.”
+  <!-- Servicios -->
+  <section id="services" class="section">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <div class="services">
+        <!-- 1. Desarrollo Web y Móvil de Alto Rendimiento -->
+        <div class="service-box" onclick="toggleService(this)" role="button" tabindex="0" aria-expanded="false">
+          <img src="https://cdn-icons-png.flaticon.com/512/841/841364.png" alt="Desarrollo Web y Móvil" loading="lazy">
+          <h3>Desarrollo Web y Móvil de Alto Rendimiento</h3>
+          <p>Creamos experiencias digitales excepcionales y escalables.</p>
+          <div class="service-details" aria-hidden="true">
+            <p>Plataformas robustas y personalizadas para optimizar procesos e interacciones.</p>
+            <ul>
+              <li>Aplicaciones web progresivas (PWA)</li>
+              <li>Plataformas e-commerce</li>
+              <li>Aplicaciones móviles nativas e híbridas</li>
+              <li>Integración con APIs y sistemas legacy</li>
+            </ul>
           </div>
-          <div class="testimonial-author">- Juan Pérez, CEO de TechCorp</div>
         </div>
-        <div class="swiper-slide">
-          <div class="testimonial-content">
-            “La calidad de sus desarrollos web y móviles es impresionante. Nuestro portal e-commerce fue lanzado con un diseño impecable y rendimiento extraordinario.”
+        <!-- 2. Automatización Inteligente y Modelos de IA -->
+        <div class="service-box" onclick="toggleService(this)" role="button" tabindex="0" aria-expanded="false" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://cdn-icons-png.flaticon.com/512/4712/4712104.png" alt="Automatización e IA" loading="lazy">
+          <h3>Automatización Inteligente y Modelos de IA</h3>
+          <p>Optimizamos operaciones y desbloqueamos insights a través de la IA.</p>
+          <div class="service-details" aria-hidden="true">
+            <p>Implementamos RPA y modelos predictivos para decisiones estratégicas.</p>
+            <ul>
+              <li>Automatización de procesos robóticos (RPA)</li>
+              <li>Modelos predictivos y clasificatorios</li>
+              <li>Procesamiento de lenguaje natural (NLP)</li>
+              <li>Computer vision y reconocimiento de patrones</li>
+            </ul>
           </div>
-          <div class="testimonial-author">- Laura Gómez, Directora de Innovación</div>
         </div>
-        <div class="swiper-slide">
-          <div class="testimonial-content">
-            “Gracias a su asesoría técnica estratégica, nos hemos posicionado como referentes en transformación digital. ¡Increíble trabajo!”
+        <!-- 3. Extracción y Análisis de Datos Estratégicos -->
+        <div class="service-box" onclick="toggleService(this)" role="button" tabindex="0" aria-expanded="false" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://cdn-icons-png.flaticon.com/512/3011/3011270.png" alt="Extracción y Análisis de Datos" loading="lazy">
+          <h3>Extracción y Análisis de Datos Estratégicos</h3>
+          <p>Convertimos datos brutos en información valiosa para el crecimiento.</p>
+          <div class="service-details" aria-hidden="true">
+            <p>Scraping avanzado y análisis exhaustivo para identificar tendencias y oportunidades.</p>
+            <ul>
+              <li>Web scraping</li>
+              <li>Limpieza y transformación</li>
+              <li>Análisis estadístico avanzado</li>
+              <li>Integración de múltiples fuentes</li>
+            </ul>
           </div>
-          <div class="testimonial-author">- Carlos Ruiz, Gerente de Proyectos</div>
+        </div>
+        <!-- 4. Chatbots Inteligentes y Conversacionales -->
+        <div class="service-box" onclick="toggleService(this)" role="button" tabindex="0" aria-expanded="false" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://cdn-icons-png.flaticon.com/512/4152/4152325.png" alt="Chatbots Inteligentes" loading="lazy">
+          <h3>Chatbots Inteligentes y Conversacionales</h3>
+          <p>Mejoramos la experiencia del cliente con soluciones automatizadas.</p>
+          <div class="service-details" aria-hidden="true">
+            <p>Chatbots con procesamiento de lenguaje natural para soporte eficiente.</p>
+            <ul>
+              <li>Chatbots para WhatsApp, Messenger y Web</li>
+              <li>Integración con CRM y sistemas de tickets</li>
+              <li>Análisis de sentimiento</li>
+              <li>Entrenamiento personalizado</li>
+            </ul>
+          </div>
+        </div>
+        <!-- 5. Dashboards y Modelos Predictivos -->
+        <div class="service-box" onclick="toggleService(this)" role="button" tabindex="0" aria-expanded="false" data-aos="fade-up" data-aos-delay="400">
+          <img src="https://cdn-icons-png.flaticon.com/512/2026/2026501.png" alt="Dashboards y Modelos" loading="lazy">
+          <h3>Dashboards y Modelos Predictivos</h3>
+          <p>Visualizamos datos complejos y predecimos tendencias futuras.</p>
+          <div class="service-details" aria-hidden="true">
+            <p>Paneles interactivos y modelos analíticos que facilitan la toma de decisiones.</p>
+            <ul>
+              <li>Dashboards interactivos (Power BI, Tableau)</li>
+              <li>Visualizaciones personalizadas</li>
+              <li>Modelos predictivos para ventas y tendencias</li>
+              <li>Alertas automáticas</li>
+            </ul>
+          </div>
+        </div>
+        <!-- 6. Asesoría Técnica Estratégica -->
+        <div class="service-box" onclick="toggleService(this)" role="button" tabindex="0" aria-expanded="false" data-aos="fade-up" data-aos-delay="500">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Asesoría Técnica" loading="lazy">
+          <h3>Asesoría Técnica Estratégica</h3>
+          <p>Orientamos y apoyamos técnicamente para el éxito de tus proyectos.</p>
+          <div class="service-details" aria-hidden="true">
+            <p>Consultoría especializada para la planificación e implementación de soluciones innovadoras.</p>
+            <ul>
+              <li>Evaluación de infraestructura</li>
+              <li>Roadmap de transformación digital</li>
+              <li>Capacitación</li>
+              <li>Soporte técnico</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <!-- Pagination y Navigation -->
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
     </div>
   </section>
 
-  <!-- SECCIÓN CTA -->
-  <section class="cta">
-    <h2 data-aos="fade-down">¿Listo para Desatar el Potencial de tu Proyecto?</h2>
-    <p data-aos="fade-up">Contáctanos y juntos transformaremos tus ideas en soluciones digitales que marcarán la diferencia.</p>
-    <a href="https://form.jotform.com/250846348123053" target="_blank" rel="noopener">🚀 ¡Comencemos a Innovar!</a>
-    <a href="https://wa.me/573136956632" target="_blank" rel="noopener">💬 Conversemos por WhatsApp</a>
+  <!-- Proyectos -->
+  <section id="projects" class="section projects-section">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title">Proyectos Innovadores</h2>
+      <div class="projects-grid">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Análisis de Sentimiento</h3>
+          <p>Plataforma para analizar opiniones de usuarios en redes sociales.</p>
+          <ul>
+            <li>Procesamiento de lenguaje natural</li>
+            <li>Visualización en tiempo real</li>
+            <li>Alertas tempranas</li>
+          </ul>
+        </div>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-icon">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <h3>Gestión de Proyectos</h3>
+          <p>Dashboard interactivo para el seguimiento de proyectos.</p>
+          <ul>
+            <li>Integración de múltiples fuentes</li>
+            <li>Reportes automatizados</li>
+            <li>Control presupuestal</li>
+          </ul>
+        </div>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>Automatización de Pagos</h3>
+          <p>Sistema para optimizar procesos de gestión de pagos.</p>
+          <ul>
+            <li>Reducción de tiempos</li>
+            <li>Validación automática</li>
+            <li>Integración contable</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- Testimonios -->
+  <section id="testimonios" class="section testimonials-section">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title">Testimonios</h2>
+      <div class="swiper" id="testimonials-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonial-content">
+              "WCore transformó nuestra operación, mejorando la eficiencia en un 70% con sus soluciones de IA."
+            </div>
+            <div class="testimonial-author">- Juan Pérez, CEO de TechCorp</div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-content">
+              "El portal e-commerce que desarrollaron aumentó las conversiones en un 40%."
+            </div>
+            <div class="testimonial-author">- Laura Gómez, Directora de Innovación</div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-content">
+              "Su asesoría nos posicionó como líderes en transformación digital. ¡Increíble trabajo!"
+            </div>
+            <div class="testimonial-author">- Carlos Ruiz, Gerente de Proyectos</div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev" aria-label="Testimonio anterior"></div>
+        <div class="swiper-button-next" aria-label="Siguiente testimonio"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Contacto -->
+  <section id="contacto" class="section cta-section">
+    <div class="container cta-content" data-aos="zoom-in">
+      <h2 class="section-title">¿Listo para transformar tu negocio?</h2>
+      <p>Contáctanos y llevemos tus ideas al siguiente nivel con soluciones tecnológicas innovadoras.</p>
+      <div class="button-group">
+        <a href="https://form.jotform.com/250846348123053" target="_blank" class="btn btn-cta">
+          <i class="fas fa-paper-plane"></i> Enviar Mensaje
+        </a>
+        <a href="https://wa.me/573136956632" target="_blank" class="btn btn-outline">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    © <script>document.write(new Date().getFullYear());</script> WCore Solutions & Innovation. 
-    Todos los derechos reservados. |
-    <a href="#">Política de Privacidad</a> |
-    <a href="#">Términos de Servicio</a>
+    <div class="container footer-content">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/company/wcore-solutions" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/wcore-solutions" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://twitter.com/wcore_solutions" target="_blank" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/wcore_solutions" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Inicio</a>
+        <a href="#services">Servicios</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto">Contacto</a>
+        <a href="politica-privacidad.html">Política de Privacidad</a>
+      </div>
+      <div class="copyright">
+        © <span id="year"></span> WCore Solutions &amp; Innovation. Todos los derechos reservados.
+      </div>
+    </div>
   </footer>
 
-  <!-- SCRIPTS -->
-  <!-- Librería AOS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <!-- Swiper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.6/swiper-bundle.min.js"></script>
+  <!-- Botón Back to Top -->
+  <button href="#home" class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 
+  <!-- Scripts optimizados -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.6/swiper-bundle.min.js" crossorigin="anonymous" defer></script>
   <script>
-    // Inicializar AOS
-    AOS.init({
-      duration: 1000, // Duración de las animaciones
-      once: true      // Ejecutar animación solo la primera vez
-    });
-
-    // Carrusel de Testimonios (Swiper)
-    const swiper = new Swiper('.swiper', {
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next',
-      },
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
-      speed: 700,
-    });
-
-    // Función para toggle de detalles en sección Servicios
-    function toggleDetails(el) {
-      const details = el.querySelector('.service-details');
-      details.style.display = (details.style.display === 'block') ? 'none' : 'block';
+    // Función para cargar scripts de forma asíncrona
+    function loadScript(src, callback) {
+      const script = document.createElement('script');
+      script.src = src;
+      script.onload = callback;
+      script.defer = true;
+      document.body.appendChild(script);
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // Inicializar AOS
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 800,
+          once: true,
+          easing: 'ease-out-quad',
+          offset: 100,
+        });
+      }
+
+      // Inicializar Swiper para Testimonios
+      if (typeof Swiper !== 'undefined') {
+        const swiper = new Swiper('#testimonials-swiper', {
+          loop: true,
+          autoplay: { delay: 5000 },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          a11y: {
+            prevSlideMessage: 'Testimonio anterior',
+            nextSlideMessage: 'Siguiente testimonio',
+            paginationBulletMessage: 'Ir al testimonio {{index}}',
+          }
+        });
+      }
+
+      // Menú móvil
+      const mobileMenu = document.getElementById('mobile-menu');
+      const navMenu = document.getElementById('nav-menu');
+      if (mobileMenu && navMenu) {
+        mobileMenu.addEventListener('click', function() {
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !isExpanded);
+          navMenu.setAttribute('data-visible', !isExpanded);
+          document.body.style.overflow = isExpanded ? 'auto' : 'hidden';
+        });
+        
+        document.querySelectorAll('.nav-link').forEach(link => {
+          link.addEventListener('click', function() {
+            if (mobileMenu.getAttribute('aria-expanded') === 'true') {
+              mobileMenu.setAttribute('aria-expanded', 'false');
+              navMenu.setAttribute('data-visible', 'false');
+              document.body.style.overflow = 'auto';
+            }
+          });
+        });
+      }
+
+      // Scroll suave mejorado
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          if (this.getAttribute('href') === '#') return;
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const target = document.querySelector(targetId);
+          if (target) {
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - 80;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+            
+            // Actualizar URL sin recargar la página
+            if (history.pushState) {
+              history.pushState(null, null, targetId);
+            } else {
+              location.hash = targetId;
+            }
+          }
+        });
+      });
+
+      // Navbar y Back to Top
+      const navbar = document.getElementById('navbar');
+      const backToTop = document.getElementById('backToTop');
+      if (navbar && backToTop) {
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+          
+          if (window.scrollY > 300) {
+            backToTop.classList.add('show');
+          } else {
+            backToTop.classList.remove('show');
+          }
+        });
+        
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Modo oscuro mejorado
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      const html = document.documentElement;
+      if (darkModeToggle) {
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+          html.setAttribute('data-theme', 'dark');
+          darkModeToggle.innerHTML = '<i class="fas fa-sun"></i><span class="sr-only">Modo claro</span>';
+        } else {
+          html.removeAttribute('data-theme');
+          darkModeToggle.innerHTML = '<i class="fas fa-moon"></i><span class="sr-only">Modo oscuro</span>';
+        }
+        
+        darkModeToggle.addEventListener('click', function() {
+          if (html.getAttribute('data-theme') === 'dark') {
+            html.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'light');
+            this.innerHTML = '<i class="fas fa-moon"></i><span class="sr-only">Modo oscuro</span>';
+          } else {
+            html.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            this.innerHTML = '<i class="fas fa-sun"></i><span class="sr-only">Modo claro</span>';
+          }
+        });
+        
+        // Escuchar cambios en las preferencias del sistema
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+          if (!localStorage.getItem('theme')) {
+            if (e.matches) {
+              html.setAttribute('data-theme', 'dark');
+              darkModeToggle.innerHTML = '<i class="fas fa-sun"></i><span class="sr-only">Modo claro</span>';
+            } else {
+              html.removeAttribute('data-theme');
+              darkModeToggle.innerHTML = '<i class="fas fa-moon"></i><span class="sr-only">Modo oscuro</span>';
+            }
+          }
+        });
+      }
+
+      // Actualizar año en el footer
+      const yearElement = document.getElementById('year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+
+      // Cargar y reproducir video con mejor manejo de errores
+      const video = document.getElementById('header-video');
+      if (video) {
+        video.setAttribute('preload', 'auto');
+        const playPromise = video.play();
+        
+        if (playPromise !== undefined) {
+          playPromise.catch(e => {
+            video.muted = true;
+            video.play();
+          });
+        }
+        
+        video.addEventListener('canplay', function() {
+          this.classList.add('loaded');
+        });
+        
+        video.addEventListener('error', function() {
+          // Fallback si el video no carga
+          const header = document.querySelector('header');
+          if (header) {
+            header.style.background = 'linear-gradient(135deg, var(--primary), var(--primary-light))';
+          }
+        });
+        
+        video.load();
+      }
+
+      // Toggle para servicios mejorado
+      window.toggleService = function(element) {
+        const isExpanded = element.getAttribute('aria-expanded') === 'true';
+        element.setAttribute('aria-expanded', !isExpanded);
+        
+        // Cerrar otros servicios abiertos
+        document.querySelectorAll('.service-box').forEach(box => {
+          if (box !== element) {
+            box.classList.remove('active');
+            box.setAttribute('aria-expanded', 'false');
+            const details = box.querySelector('.service-details');
+            if (details) {
+              details.style.display = 'none';
+              details.setAttribute('aria-hidden', 'true');
+            }
+          }
+        });
+        
+        element.classList.toggle('active');
+        const details = element.querySelector('.service-details');
+        if (details) {
+          details.style.display = details.style.display === 'block' ? 'none' : 'block';
+          details.setAttribute('aria-hidden', details.style.display === 'none');
+        }
+      };
+      
+      // Cerrar servicios al hacer clic fuera (mejorado)
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.service-box')) {
+          document.querySelectorAll('.service-box').forEach(box => {
+            box.classList.remove('active');
+            box.setAttribute('aria-expanded', 'false');
+            const details = box.querySelector('.service-details');
+            if (details) {
+              details.style.display = 'none';
+              details.setAttribute('aria-hidden', 'true');
+            }
+          });
+        }
+      });
+      
+      // Manejo de teclado para servicios
+      document.querySelectorAll('.service-box').forEach(box => {
+        box.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleService(this);
+          }
+        });
+      });
+    });
+    
+    // Precarga de fuentes y recursos adicionales
+    window.addEventListener('load', function() {
+      // Cargar fuentes de Google
+      const fontLink = document.createElement('link');
+      fontLink.rel = 'stylesheet';
+      fontLink.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap';
+      document.head.appendChild(fontLink);
+
+      // Precargar imágenes de proyectos
+      const images = ['sentiment-analysis.jpg', 'project-management.jpg', 'payment-automation.jpg'];
+      images.forEach(img => {
+        const image = new Image();
+        image.src = 'assets/' + img;
+      });
+      
+      // Cargar scripts no críticos
+      if (typeof jQuery === 'undefined') {
+        loadScript('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js');
+      }
+      
+      if (typeof AOS === 'undefined') {
+        loadScript('https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js', function() {
+          AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-quad',
+            offset: 100,
+          });
+        });
+      }
+      
+      if (typeof Swiper === 'undefined') {
+        loadScript('https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.6/swiper-bundle.min.js');
+      }
+    });
   </script>
 </body>
 </html>
